@@ -1,0 +1,105 @@
+.about-video
+    position: relative
+    video
+        max-width: 100%
+.about-title
+    padding-bottom: 15px
+    width: 320px
+    position: absolute
+    top: 40%
+    left: 50%
+    font-size: 25px
+    color: white
+    font-weight: 700
+    transform: translateX(-50%)
+    border-bottom: 3px solid white
+.about-text
+    margin: 30px 15px 0
+    font-family: 'Montserrat', sans-serif
+
+.frame 
+    margin: 30px 15px 
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        box-shadow: 10px 10px 30px 15px rgba(0,0,0,0.08)
+
+.form-callback
+    margin: 40px 10px 40px
+    &__title
+        margin-bottom: 20px
+        font-size: 25px
+        font-weight: 700
+        text-align: center
+    .about-form
+        display: flex
+        flex-direction: column
+        input
+            margin-bottom: 15px
+            padding: 10px 10px
+            border-radius: 4px
+        .my-btn
+            padding: 8px 0
+            text-align: center
+            border: none
+            background: #85693b
+            color: white
+            border-radius: 4px
+.about-foto
+    margin: 0 10px
+.about-foto__title
+    margin-bottom: 20px
+    font-size: 25px
+    font-weight: 700
+    text-align: center
+.about-video
+    position: relative
+    margin: 30px 10px
+    &-footer
+        position: absolute
+        left: 0
+        bottom: 0
+        background: #85693b
+        color: white
+        width: 100%
+        text-align: center
+        padding: 5px
+.projects
+    margin: 40px 10px
+    img
+        display: block
+        width: 200px
+        margin: 0 auto
+.lg-prev
+    background: url("../img/left.svg") no-repeat
+    opacity: .8
+    width: 30px
+    height: 30px
+.lg-next
+    background: url("../img/right.svg") no-repeat
+    opacity: .8
+    width: 30px
+    height: 30px
+.lg-toolbar .lg-icon
+    background: url("../img/close.svg") no-repeat
+    opacity: .5
+    width: 20px
+    height: 20px
+    margin-right: 20px
+    margin-top: 20px
+#lg-counter
+    display: none
+#lg-download
+    display: none
+.lg-toolbar .lg-close:after
+    display: none
+.lg-actions .lg-next:before
+    display: none
+.lg-actions .lg-prev:after
+    display: none

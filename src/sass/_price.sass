@@ -1,0 +1,135 @@
+.price-tabs
+    display: flex
+    justify-content: space-between
+    width: 280px
+    font-weight: 700
+    margin: 0 auto
+    margin-top: 25px
+    .active
+        color: #85693b
+        border-bottom: 2px solid #85693b
+    &-content
+        h2
+            font-size: 26px
+            font-weight: 700
+            text-align: center
+            margin-top: 10px
+        .banner
+            color: white
+            text-align: center
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            font-weight: 700
+            background: url("../img/banner-price.jpg") center
+            min-height: 500px
+            &__title
+                margin-bottom: 30px
+                font-size: 32px
+            &__price
+                margin-bottom: 30px
+                line-height: .5
+                font-size: 50px
+                span
+                    font-size: 14px
+            &__text
+                margin-bottom: 30px
+.price-slider
+    margin: 0 15px
+    .white-font
+        color: white
+    .carousel-control-next,
+    .carousel-control-prev 
+        filter: invert(100%)
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon
+        bottom: 40px
+        position: absolute
+
+
+
+.pack__header
+    padding: 10px 0
+    background: #85693b
+    color: black
+    text-align: center
+    &-title
+        font-size: 24px
+        font-weight: 700
+    &-text
+        font-family: 'Montserrat', sans-serif
+.pack__body
+    padding: 30px 0
+    text-align: center
+    color: black
+    background: #f4f4f4
+    &-price
+        margin-top: 10px
+        line-height: .7
+        font-size: 65px
+        font-weight: 700
+        color: #555
+    &-value
+        font-family: 'Montserrat', sans-serif
+        margin-bottom: 20px
+    &-text
+        position: relative
+        margin-left: 40px
+        margin-right: 40px
+        text-align: left
+        border-bottom: 2px solid #e0e0e0
+        padding: 10px 0
+        &:before
+            position: absolute
+            content: ""
+            left: -20px
+            top: 16px
+            width: 10px
+            height: 10px
+            background: url("../img/check.svg")
+    
+.ginger-bg
+    background: #cd7f32
+.gray-bg
+    background: #c0c0c0
+.yellow-bg
+    background: #ffd700
+.font-black
+    color: black
+
+.elseServices
+    margin: 0 15px
+    &-img
+        width: 100%
+        margin: 0 auto
+    h2
+        font-size: 26px
+        font-weight: 700
+        text-align: center
+        margin-top: 30px
+        margin-bottom: 15px
+    &-descr
+        margin: 20px 0
+        padding: 10px 0 40px 0
+    &-price
+        font-family: 'Montserrat', sans-serif
+    &-title
+        font-size: 22px
+        font-weight: 700
+        margin-top: 10px
+    &-text
+        font-family: 'Montserrat', sans-serif
+        margin-top: 15px
+        font-size: 14px
+
+.carousel-indicators li 
+    box-sizing: content-box
+    -ms-flex: 0 1 auto
+    flex: 0 1 auto
+    width: 12px
+    height: 12px
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%
+    background-color: #000;
