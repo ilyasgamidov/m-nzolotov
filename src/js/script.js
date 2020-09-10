@@ -1,6 +1,44 @@
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
+    function hideArrow(carouselId, prev, next) {
+        var carouselLength = $('.carousel-item').length - 1;
+        $(prev).addClass('d-none');
+    
+        if (carouselLength) {
+            $(next).removeClass('d-none');
+        }
+        
+        $(carouselId).carousel({
+            interval: false,
+            wrap: false
+        }).on('slide.bs.carousel', function (e) {
+            // First one
+            if (e.to == 0) {
+                $(prev).addClass('d-none');
+                $(next).removeClass('d-none');
+            } // Last one
+            else if (e.to == 3) {
+                $(prev).removeClass('d-none');
+                $(next).addClass('d-none');
+            } // The rest
+            else {
+                $(prev).removeClass('d-none');
+                $(next).removeClass('d-none');
+            }
+        });
+    }
+
+    hideArrow('#carouselExampleControls', '.carosel1-prev', ".carosel1-next");
+    hideArrow('#carouselExampleControls2', '.carosel2-prev', ".carosel2-next");
+    hideArrow('#carouselExampleControls3', '.carosel3-prev', ".carosel3-next");
+    hideArrow('#carouselExampleControls4', '.carosel4-prev', ".carosel4-next");
+    hideArrow('#carouselExampleControls5', '.carosel5-prev', ".carosel5-next");
+    hideArrow('#carouselExampleControls6', '.carosel6-prev', ".carosel6-next");
+    hideArrow('#carouselExampleControls7', '.carosel7-prev', ".carosel7-next");
+    hideArrow('#carouselExampleControls8', '.carosel8-prev', ".carosel8-next");
+    hideArrow('#carouselExampleControls9', '.carosel9-prev', ".carosel9-next");
+
     const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'block') => {
 
       try {
@@ -237,6 +275,10 @@ window.addEventListener('DOMContentLoaded', () => {
         
         modals();
     }catch(e){}
+
+
+
+    
 
     lightGallery(document.getElementById('lightgallery'));
     lightGallery(document.getElementById('husband'));
