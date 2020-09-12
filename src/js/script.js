@@ -1,6 +1,97 @@
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.my-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.backstage-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    } catch(e){}
+
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.st-portfolio-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+    
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.st-husband-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.st-walk-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.st-banquet-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+
+    try {
+        var slider = tns({
+            preventScrollOnTouch: 'force',
+            container: '.st-accessories-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            gutter: 10,
+            nav: false,
+            controls: false
+          });
+    }catch(e){}
+
     function hideArrow(carouselId, prev, next) {
         var carouselLength = $('.carousel-item').length - 1;
         $(prev).addClass('d-none');
@@ -83,90 +174,6 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
   tabs('.price-tabs', '.price-tab', '.price-tabs-content', 'active');
-
-    try {
-        var slider = tns({
-            container: '.my-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
-
-    try {
-        var slider = tns({
-            container: '.backstage-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    } catch(e){}
-
-    try {
-        var slider = tns({
-            container: '.st-portfolio-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
-    
-    try {
-        var slider = tns({
-            container: '.st-husband-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
-
-    try {
-        var slider = tns({
-            container: '.st-walk-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
-
-    try {
-        var slider = tns({
-            container: '.st-banquet-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
-
-    try {
-        var slider = tns({
-            container: '.st-accessories-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            gutter: 10,
-            nav: false,
-            controls: false
-          });
-    }catch(e){}
 
     try {
         const modals = () => {
@@ -274,19 +281,88 @@ window.addEventListener('DOMContentLoaded', () => {
         };
         
         modals();
-    }catch(e){}
+    }catch(e){} 
 
+    try {
+        lightGallery(document.getElementById('lightgallery'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('husband'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('walk'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('banquet'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('accessories'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('video-img'));
+    } catch(e){}
+    try {
+        lightGallery(document.getElementById('video-gallery'));
+    } catch(e){}
 
-
-    
-
-    lightGallery(document.getElementById('lightgallery'));
-    lightGallery(document.getElementById('husband'));
-    lightGallery(document.getElementById('walk'));
-    lightGallery(document.getElementById('banquet'));
-    lightGallery(document.getElementById('accessories'));
-    lightGallery(document.getElementById('video-img'));
-    lightGallery(document.getElementById('video-gallery'));
-
-    
+    const forms = () => {
+        const form = document.querySelectorAll('form'),
+              inputs = document.querySelectorAll('input'),
+              phoneInputs = document.querySelectorAll('input[name="user_phone"]');
+      
+        phoneInputs.forEach(item => {
+            item.addEventListener('input', () => {
+                item.value = item.value.replace(/\D/, '');
+            });
+        });
+        
+        const message = {
+            loading: 'Загрузка...',
+            success: 'Сообщение отправлено! Скоро мы с вами свяжемся.',
+            failure: 'Что-то пошло не так...'
+        };
+      
+        const postData = async (url, data) => {
+            document.querySelector('.status').textContent = message.loading;
+            let res = await fetch(url, {
+                method: "POST",
+                body: data
+            });
+      
+            return await res.text();
+        };
+      
+        const clearInputs = () => {
+            inputs.forEach(item => {
+                item.value = '';
+            });
+        };
+      
+        form.forEach(item => {
+            item.addEventListener('submit', (e) => {
+                e.preventDefault();
+      
+                let statusMessage = document.createElement('div');
+                statusMessage.classList.add('status');
+                item.appendChild(statusMessage);
+      
+                const formData = new FormData(item);
+      
+                postData('mailer/smart.php', formData)
+                    .then(res => {
+                        console.log(res);
+                        statusMessage.textContent = message.success;
+                    })
+                    .catch(() => statusMessage.textContent = message.failure)
+                    .finally(() => {
+                        clearInputs();
+                        setTimeout(() => {
+                            statusMessage.remove();
+                        }, 5000);
+                    });
+            });
+        });
+      };
+      
+      forms();
 });
